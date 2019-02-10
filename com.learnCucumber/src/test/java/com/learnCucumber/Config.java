@@ -15,9 +15,12 @@ public class Config {
 	
 	static WebDriver driver;
 
+	
+	// This is new commit from nikhil Screenshot code
 	public static void capturescreenshot(String Screenname) throws IOException {
 		
 		File srcshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		
 		
 		FileUtils.copyFile(srcshot,new File ("/Users/ameyaallampallewar/Desktop/fb1/fail.png"));
 	}
