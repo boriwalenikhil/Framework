@@ -1,5 +1,4 @@
-package com.learnCucumber;
-
+package ExtentReport;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
@@ -8,10 +7,7 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import com.relevantcodes.extentreports.NetworkMode;
 
-
-
-public class HTMLReportGenerator {
-
+public class HTMLReport {
 	static ExtentReports report=null;
 	static ExtentTest logger; 
 	
@@ -43,24 +39,14 @@ public class HTMLReportGenerator {
 		if(Status.equalsIgnoreCase("pass"))
 		{		logger.log(LogStatus.PASS,StepName,tbl);}
 		else if(Status.equalsIgnoreCase("fail"))
-		{		logger.log(LogStatus.FAIL,StepName, StepDetails);}
+		{		logger.log(LogStatus.FAIL,StepName, tbl);}
 		else if(Status.equalsIgnoreCase("error"))
-		{		logger.log(LogStatus.ERROR,StepName, StepDetails);}
+		{		logger.log(LogStatus.ERROR,StepName, tbl);}
 		else if(Status.equalsIgnoreCase("info"))
-		{		logger.log(LogStatus.INFO,StepName, StepDetails);}
+		{		logger.log(LogStatus.INFO,StepName, tbl);}
 		else
 		{logger.log(LogStatus.INFO,StepName, StepDetails);}
 	
 		
 	}
-	public static void main(String[] args) throws UnknownHostException {
-		TestSuiteStart("/Users/ameyaallampallewar/Desktop/fb1/facebook.html", "ejagruti");
-		TestCaseStart("this is test name", "this is description");
-		TestCaseEnd();
-		TestSuiteEnd();
-
-	}
-
 }
-
-

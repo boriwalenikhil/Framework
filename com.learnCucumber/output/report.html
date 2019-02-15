@@ -45,7 +45,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Feb 8, 2019 10:34:03 AM</span>
+			<span class='label blue darken-3 suite-start-time'>Feb 13, 2019 06:32:37 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -73,8 +73,7 @@
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
 					<li><a href='#'>@tag</a></li>
-					<li><a href='#'>@Withscenarioonly</a></li>
-					<li><a href='#'>@nikhil</a></li>
+					<li><a href='#'>@WithScenarioOutline</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -129,7 +128,7 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> scenario(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>2</span> scenario(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -143,7 +142,7 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>4</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>8</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -167,7 +166,7 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Test Facebook smoke scenario</span>
-						<span class='test-time'>Feb 8, 2019 10:34:04 AM</span>
+						<span class='test-time'>Feb 13, 2019 06:32:38 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -177,31 +176,53 @@
     <a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
     <a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
-<div class='scenario node' test-id='2' status='pass'>
-    <div class='category-list'>
-        <span class='category label'>@Withscenarioonly</span>
-        <span class='category label'>@nikhil</span>
-    </div>
-    <span class='duration right label'>0h 1m 58s+971ms</span>
+<div class='scenariooutline node' test-id='2' status='pass'>
+    <span class='duration right label'>0h 2m 9s+769ms</span>
     <div class="bdd-test">
-        <div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: Test login with valid credentials</div>
+        <div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> ScenarioOutline: Test login with valid credentials</div>
     </div>
     <ul class='steps'>
-        <li test-id='3' class='node when pass' status='pass'>
-            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Open "firefox" and start application</div>
-                <div class="node-step">passed</div>
+        <li test-id='3' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Test login with valid credentials</div>
+            <ul class='gc steps'>
+                    <li test-id='4' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Open "GoogleChrome" and start application</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='5' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When I enter valid "n.boriwale@gmail.com" and valid "Apple@452"</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='6' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user should login successfully</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='7' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then application should be closed</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+            </ul>
         </li>
-        <li test-id='4' class='node when pass' status='pass'>
-            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When I enter valid "n.boriwale@gmail.com" and valid "Apple@452"</div>
-                <div class="node-step">passed</div>
-        </li>
-        <li test-id='5' class='node then pass' status='pass'>
-            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user should login successfully</div>
-                <div class="node-step">passed</div>
-        </li>
-        <li test-id='6' class='node then pass' status='pass'>
-            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then application should be closed</div>
-                <div class="node-step">passed</div>
+        <li test-id='8' class='node scenario pass' status='pass'>
+            <div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Test login with valid credentials</div>
+            <ul class='gc steps'>
+                    <li test-id='9' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Open "GoogleChrome" and start application</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='10' class='gc when pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When I enter valid "n.boriwale@gmail.com" and valid "Nikhil111"</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='11' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user should login successfully</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+                    <li test-id='12' class='gc then pass' status='pass'>
+                        <h6 class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then application should be closed</h6>
+                            <div class="node-step">passed</div>
+                    </li>
+            </ul>
         </li>
     </ul>
 </div>
@@ -249,12 +270,12 @@
 					<div class='category-heading'>
 						<span class='category-name'>@tag</span>
 						<span class='category-status right'>
-						<span class='label pass'>1</span>
+						<span class='label pass'>3</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 3</span>
 							
 							
 						</div>
@@ -269,41 +290,18 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Feb 8, 2019 10:34:04 AM</td>
+										<td>Feb 13, 2019 06:32:38 PM</td>
 										<td class='linked' test-id='1'>Test Facebook smoke scenario</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@Withscenarioonly</span>
-						<span class='category-status right'>
-						<span class='label pass'>1</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
-							
-							
-						</div>
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
 									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
+										<td>Feb 13, 2019 06:32:38 PM</td>
+										<td class='linked' test-id='3'>Test Facebook smoke scenario.Test login with valid credentials.Test login with valid credentials</td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
-								</thead>
-								<tbody>
 									<tr>
-										<td>Feb 8, 2019 10:34:04 AM</td>
-										<td class='linked' test-id='2'>Test Facebook smoke scenario.Test login with valid credentials</td>
+										<td>Feb 13, 2019 06:34:15 PM</td>
+										<td class='linked' test-id='8'>Test Facebook smoke scenario.Test login with valid credentials.Test login with valid credentials</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -313,14 +311,14 @@
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@nikhil</span>
+						<span class='category-name'>@WithScenarioOutline</span>
 						<span class='category-status right'>
-						<span class='label pass'>1</span>
+						<span class='label pass'>2</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
 							
 							
 						</div>
@@ -335,8 +333,13 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Feb 8, 2019 10:34:04 AM</td>
-										<td class='linked' test-id='2'>Test Facebook smoke scenario.Test login with valid credentials</td>
+										<td>Feb 13, 2019 06:32:38 PM</td>
+										<td class='linked' test-id='3'>Test Facebook smoke scenario.Test login with valid credentials.Test login with valid credentials</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 13, 2019 06:34:15 PM</td>
+										<td class='linked' test-id='8'>Test Facebook smoke scenario.Test login with valid credentials.Test login with valid credentials</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -367,31 +370,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>2</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>4</div>
+					<div class='panel-lead'>8</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Feb 8, 2019 10:34:03 AM</div>
+					<div class='panel-lead'>Feb 13, 2019 06:32:37 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Feb 8, 2019 10:36:03 AM</div>
+			 		<div class='panel-lead'>Feb 13, 2019 06:34:48 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 1m 59s+624ms</div>
+					<div class='panel-lead'>0h 2m 10s+389ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -408,7 +411,7 @@
 						</tr>
 						<tr>
 							<td>@tag</td>
-							<td>1</td>
+							<td>3</td>
 							<td>0</td>
 							<td>0</td>
 							<td>
@@ -416,17 +419,8 @@
 							</td>
 						</tr>
 						<tr>
-							<td>@Withscenarioonly</td>
-							<td>1</td>
-							<td>0</td>
-							<td>0</td>
-							<td>
-									100%
-							</td>
-						</tr>
-						<tr>
-							<td>@nikhil</td>
-							<td>1</td>
+							<td>@WithScenarioOutline</td>
+							<td>2</td>
 							<td>0</td>
 							<td>0</td>
 							<td>
@@ -452,8 +446,8 @@
 				warningParent: 0,
 				skipParent: 0,
 				exceptionsParent: 0,
-				childCount: 1,
-				passChild: 1,
+				childCount: 2,
+				passChild: 2,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
@@ -462,8 +456,8 @@
 				infoChild: 0,
 				debugChild: 0,
 				exceptionsChild: 0,
-				grandChildCount: 4,
-				passGrandChild: 4,
+				grandChildCount: 8,
+				passGrandChild: 8,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
@@ -476,7 +470,7 @@
 		</script>
 		<script>
 			var timeline = {
-			        "Test Facebook smoke scenario":118.971
+			        "Test Facebook smoke scenario":129.769
 			};
 		</script>
 		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>

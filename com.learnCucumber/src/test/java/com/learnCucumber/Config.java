@@ -11,17 +11,27 @@ import org.codehaus.plexus.util.FileUtils;
 
 public class Config {
 
-	public static int Counter = 1;
+	public static int counter = 1;
 	
 	static WebDriver driver;
 
 	
 	// This is new commit from nikhil Screenshot code
-	public static void capturescreenshot(String Screenname) throws IOException {
+public static String TakeScreenShot(String ImagePath,WebDriver driver,long ms) throws IOException{
 		
-		File srcshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		
-		
-		FileUtils.copyFile(srcshot,new File ("/Users/ameyaallampallewar/Desktop/fb1/fail.png"));
+
+			File src= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+			File dest = new File(ImagePath);
+			FileUtils.copyFile(src, dest);
+			
+			
+			String s = dest.toString();
+		    System.out.println("Screenshot Taken!!!!");
+			return s;
+
+
+	    
+	
+		  
 	}
 }

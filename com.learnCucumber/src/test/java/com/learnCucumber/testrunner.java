@@ -1,36 +1,35 @@
 package com.learnCucumber;
 
-import java.io.File;
 
-import org.junit.AfterClass;
 import org.junit.runner.RunWith;
 
-import com.cucumber.listener.Reporter;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(
+
+@CucumberOptions(plugin = {"pretty", "html:target/cucumber"},
+features = {"src/test/resources/MyApplication.feature"},
+tags={"@tag"}
+)
+/*@CucumberOptions(
 plugin = {"html:target/cucumber",
-		"json:target/cucumber.json",
+		"json:target/cucumber.jso,
 		"html:target/cucumber-html-report",
 		"usage:target/cucumber-usage.json",
 		"junit:target/cucumber-result.xml",
-		"com.cucumber.listener.ExtentCucumberFormatter:output/report.html"
 		},
-//plugin = {"pretty", "html:target/cucumber/output.json",
-//"com.cucumber.listener.ExtentCucumberFormatter:output/report.html"},
+		*/
+		
 
-features = {"src/test/resources/MyApplication.feature"},
-tags={"@nikhil"},
-dryRun = false   // check each method correctly attach or not.
+//dryRun = false   // check each method corre
 
-)
+
 
 
 public class testrunner {
-
+/*
 	@AfterClass
 	public static void teardown() {
 
@@ -39,6 +38,7 @@ public class testrunner {
 		Reporter.setSystemInfo("os", "Mac OSX");
 		Reporter.setTestRunnerOutput("Sample test runner output message");
 	}
+	*/
 }
 	
 	
