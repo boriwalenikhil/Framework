@@ -23,47 +23,40 @@ public class MyApplication {
 	{
 		// Write code here that turns the phrase above into concrete actions
 
-				try 
-				{
-					Thread.sleep(1000);
+		try 
+			{
+				Thread.sleep(1000);
 
-					System.setProperty("webdriver.gecko.driver",
-							"/Users/ameyaallampallewar/Documents/Dhanu Automation/Framework/com.learnCucumber/geckodriver");
-					// System.setProperty("webdriver.chrome.driver",
-					// "/Users/ameyaallampallewar/Documents/Dhanu
-					// Automation/Framework/com.learnCucumber/chromedriver 2");
-					//System.setProperty("https.proxyHost", "myProxy");
+				System.setProperty("webdriver.gecko.driver","/Users/ameyaallampallewar/Documents/Dhanu Automation/Framework/com.learnCucumber/geckodriver");
+				// System.setProperty("webdriver.chrome.driver",
+				// "/Users/ameyaallampallewar/Documents/Dhanu
+				// Automation/Framework/com.learnCucumber/chromedriver 2");
+				//System.setProperty("https.proxyHost", "myProxy");
 				//	System.setProperty("https.proxyPort", "80");
 
-					driver = new FirefoxDriver();
-					System.out.println("Mozilla Firefox Headless Browser Initialized");
+				driver = new FirefoxDriver();
+				System.out.println("Mozilla Firefox Headless Browser Initialized");
 
-					driver.manage().window().maximize();
+				driver.manage().window().maximize();
 
-					driver.get("https://www.facebook.com/");
-					//Thread.sleep(5000);
-					System.out.println("Page Title is : " + driver.getTitle());
+				driver.get("https://www.facebook.com/");
+				//Thread.sleep(5000);
+				System.out.println("Page Title is : " + driver.getTitle());
 
-					//String message = "Status:PASS,Step Number:" + Config.counter++ + ",Step: opens and start appliation"
+				//String message = "Status:PASS,Step Number:" + Config.counter++ + ",Step: opens and start appliation"
 				//			+ "exception:NA";
 				//	logger.info(message);
 					
-					HTMLReport.StepDetails("pass", "Open Firefox and start application", "Parameter Browser= Firefox ","");
-
-				} 
+				HTMLReport.StepDetails("pass", "Open Firefox and start application", "Parameter Browser= Firefox ","");
+			} 
 				
-				catch (Exception ex)
-				{
-					
-					HTMLReport.StepDetails("fail", "Open Firefox and start application", "Browser= Firefox ","");
+			catch (Exception ex)
+			{	
+				HTMLReport.StepDetails("fail", "Open Firefox and start application", "Browser= Firefox ","");
 
-
-					//String message = "Status:FAIL,Step Number:" + Config.counter++ + ",Step: opens and start appliation"
-				//			+ "exception:" + ex.getMessage();
-
+				//String message = "Status:FAIL,Step Number:" + Config.counter++ + ",Step: opens and start appliation" + "exception:" + ex.getMessage();
 				//	logger.error(message);
-
-				}		
+			}		
 	}
 
 
@@ -83,8 +76,8 @@ public class MyApplication {
 			//Thread.sleep(3000);
 			
 			HTMLReport.StepDetails("pass", "I enter valid "+uname+" and valid "+pass+"", "Parameter uname= "+uname+", pwd="+pass+" ","");
-
 		} 
+		
 		catch (Exception ex)
 		{
 			HTMLReport.StepDetails("fail", "I enter valid "+uname+" and valid "+pass+"", "uname= NA, pwd=NA ","");
@@ -121,14 +114,12 @@ public class MyApplication {
 		
 			HTMLReport.StepDetails("pass", "Enter valid uname and password", "Parameter= NA ","");
 
-			driver.close();
-			
+			driver.close();		
 		}
 		
 		catch (Exception ex) 
 		{
 			HTMLReport.StepDetails("fail", "Enter valid uname and password", "Parameter= NA ","");
-
 		}
 
 	}
