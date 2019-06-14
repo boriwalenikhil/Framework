@@ -21,7 +21,7 @@ public boolean isFirstScenario = true;
 		HTMLReport.TestSuiteStart("/Users/ameyaallampallewar/Desktop/Result/Nikhil.html", "ejagruti");
         // get particular scenario name from login.features
         HTMLReport.TestCaseStart(obj.getName(), "This is description");
-		
+	
 	}
 	
 	@After
